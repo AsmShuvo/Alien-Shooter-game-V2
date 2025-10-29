@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Alien Shooter — Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top navigation bar -->
+    <header id="topbar">
+      <div class="nav-left">
+        <a href="register.html" class="nav-brand">Alien Shooter</a>
+      </div>
+      <div class="nav-right">
+        <a href="game.html" class="nav-btn">Play</a>
+        <a href="leaderboard.html" class="nav-btn">Leaderboard</a>
+      </div>
+    </header>
+    <!-- End navigation bar -->
+
+    <!-- Main content area -->
+    <main class="centered">
+      <!-- This is where the game itself lives -->
+      <div id="game-container" tabindex="0" aria-label="Game area">
+        <div id="player" class="player"></div>
+        <!-- In-game UI for score, health, etc. -->
+        <div id="info-board" class="info">
+          <div class="info-item">Score: <span id="score">0</span></div>
+          <div class="info-item player-name-ingame">
+            Player: <span id="playerName">Player</span>
+          </div>
+          <div class="info-item">Health: <span id="health">5</span></div>
+          <button id="pauseBtn" class="info-btn">⏸️ Pause</button>
+        </div>
+
+        <!-- Pause Menu Overlay -->
+        <div id="pause-menu" class="overlay hidden">
+          <h2>Game Paused</h2>
+          <div class="menu-options">
+            <button id="resumeBtn" class="primary">Resume Game</button>
+            <button id="restartPauseBtn" class="secondary">Restart Game</button>
+            <button id="highscoreBtn" class="secondary">
+              Highest Score: <span id="highScoreText">0</span>
+            </button>
+            <button id="settingsBtn" class="secondary">Settings</button>
+            <a href="register.html"
+              ><button class="secondary">Main Menu</button></a
+            >
+          </div>
+        </div>
+
+        <!-- Game Over Overlay -->
+        <div id="game-over" class="overlay hidden">
+          <h2>GAME OVER</h2>
+          <p>Final Score: <strong id="finalScore">0</strong></p>
+          <div class="row">
+            <button id="restartBtn" class="primary">Restart</button>
+            <a href="register.html"
+              ><button class="secondary">Main Menu</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Game scripts -->
+    <script src="js/assets.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

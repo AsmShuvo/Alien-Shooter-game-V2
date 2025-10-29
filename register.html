@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Alien Shooter — Register / Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top navigation bar -->
+    <header id="topbar">
+      <div class="nav-left">
+        <a href="register.html" class="nav-brand">Alien Shooter</a>
+      </div>
+      <div class="nav-right">
+        <a href="game.html" class="nav-btn">Play</a>
+        <a href="leaderboard.html" class="nav-btn">Leaderboard</a>
+      </div>
+    </header>
+    <!-- End navigation bar -->
+
+    <!-- Main content area -->
+    <main class="centered">
+      <!-- The main card for registration and login -->
+      <div class="card" id="auth-card">
+        <h2>👾 Alien Shooter</h2>
+
+        <!-- General message area for auth errors -->
+        <div id="authError" class="error"></div>
+
+        <div class="tabs">
+          <button id="tab-register" class="tab active">Register</button>
+          <button id="tab-login" class="tab">Login</button>
+        </div>
+
+        <!-- Registration Form -->
+        <form id="form-register" class="form">
+          <input id="regName" type="text" placeholder="Full name" required />
+          <input id="regPhone" type="tel" placeholder="Phone number" required />
+          <input id="regEmail" type="email" placeholder="Email" required />
+          <input
+            id="regPassword"
+            type="password"
+            placeholder="Password (min 6 chars)"
+            required
+          />
+          <div class="row">
+            <button id="regSubmit" class="primary">Register & Play</button>
+          </div>
+          <!-- Area for registration-specific errors -->
+          <div id="regError" class="error"></div>
+        </form>
+
+        <!-- Login Form -->
+        <form id="form-login" class="form hidden">
+          <input id="loginEmail" type="email" placeholder="Email" required />
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <div class="row">
+            <button id="loginSubmit" class="primary">Login & Play</button>
+          </div>
+          <!-- Area for login-specific errors -->
+          <div id="loginError" class="error"></div>
+        </form>
+
+        <p class="muted"><a href="leaderboard.html">View Leaderboard</a></p>
+      </div>
+    </main>
+
+    <!-- Authentication script -->
+    <script src="js/auth.js"></script>
+  </body>
+</html>
